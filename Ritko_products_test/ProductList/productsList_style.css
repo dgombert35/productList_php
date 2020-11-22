@@ -1,0 +1,33 @@
+.productList{
+	margin-top: 3%;
+}
+
+.listOfProducts{
+	padding:2%;
+}
+
+.productDetail{
+	padding: 2%;
+}
+
+.product{
+	width: 100%;
+    display: flex;
+    padding: 2%;
+    align-items: baseline;
+}
+
+.productName{
+	text-align: start;
+}
+
+.referenceName, .productName, .productPrice{
+	font-size: 22px;
+}
+
+.deleteButton{
+	text-align: end;
+}
+
+
+    

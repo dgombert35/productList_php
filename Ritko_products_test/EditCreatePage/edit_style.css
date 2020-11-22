@@ -1,0 +1,125 @@
+.editPage{
+	text-align: center;
+	padding: 2%;
+}
+
+.editPageTitle{
+	margin-top: 2%;
+	margin-bottom: 3%;
+}
+
+.reference, .price{
+	width: 35%;
+	margin:auto;
+	text-align: initial;
+}
+
+#cke_myShortTextarea{
+	width: 100%;
+	border:1px solid black;
+	border-radius: 15px!important;
+	height: 120px;
+}
+
+#cke_myDescribeTextarea{
+	width: 100%;
+	border:1px solid black;
+	border-radius: 15px!important;
+	height: 300px;
+}
+
+[id^="cke_"] {
+    border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+
+.cke_reset{
+	border-radius: 15px!important;
+}
+
+.cke_reset>div{
+	height: 70px!important;
+}
+
+#cke_myDescribeTextarea>div>div {
+	border-radius: 15px!important;
+	height: 100px!important;
+}
+
+.col-md-4{
+	padding-right-top: 2%;
+}
+
+.priceLabel, .referenceLabel{
+	padding: 1%;
+	padding-left: 0;
+}
+
+.priceRefInformations, .languageValue{
+	padding: 1%;
+	text-align: center;
+	background-color: lightgray;
+	border-radius: 15px!important;
+	border: none;
+}
+
+.nameLabel, .languageLabel{
+	text-align: initial;
+	padding-top: 4%;
+	padding-left: 0;
+}
+
+.createPriceReference{
+	border-radius: 15px;
+}
+
+.createPriceReference:focus{
+	outline: none;
+}
+
+.editform{
+	max-width: 100%;
+}
+
+.productInformationsDetails{
+	padding: 3%;
+	padding-top: 1%;
+}
+
+.languageSelect{
+	padding: 2%;
+	border-radius: 15px;
+}
+
+
+.col-md-8{
+	border-radius: 15px;
+	padding: 3%;
+}
+
+.col-md-8:focus {
+	outline: none;
+}
+
+.shortDescription, .price{
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.shortDescriptionLabel, .productName{
+	padding-top: 4%;
+}
+
+.texteareaDescription{
+	height: 300px;
+}
+
+.buttons{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+
+    

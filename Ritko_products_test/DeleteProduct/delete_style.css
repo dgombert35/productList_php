@@ -1,0 +1,23 @@
+.deletePage{
+	width: 50%;
+	margin: auto;
+	padding: 5%;
+	text-align: center;
+}
+
+.confirmQuestion{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.deleteConfirmation, .returnButton{
+	padding-top: 2%;
+}
+
+.buttons{
+	display: flex;
+	justify-content: space-around;
+}
+
+
+    
