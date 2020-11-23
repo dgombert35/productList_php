@@ -93,12 +93,13 @@
 			}catch(PDOException $e) {
 				    die($e->getMessage());
 			}
-
-			while($getId = $sqlGetIdsLanguages->fetch()){
+			$producNotCreate = true;
+			while(($getId = $sqlGetIdsLanguages->fetch()) && $producNotCreate){
 				$languagesId = $getId['languages_id'];
 
 				if(!empty($_POST['productName'.$languagesId]) && !empty($_POST['productShortDescription'.$languagesId]) && !empty($_POST['productDescription'.$languagesId])){
 					productCreate($languagesId);
+					$producNotCreate = false;
 				} else {
 					echo "<script type='text/javascript'>
 					$(document).ready(function(){
