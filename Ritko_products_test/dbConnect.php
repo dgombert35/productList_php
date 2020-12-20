@@ -1,6 +1,6 @@
 <?php
 	try {
-        $db = new PDO('mysql:host=localhost;dbname=dury;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $db = new PDO('mysql:host=localhost;dbname=dury;charset=utf8', '', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
     }
