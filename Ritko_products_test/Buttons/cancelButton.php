@@ -2,7 +2,7 @@
 	$cancelButton = "Cancel";
 ?>
 <div class="cancelButton">
-	<a class="btn btn-secondary" href="../productsTest.php?language=<?php echo htmlspecialchars($_COOKIE['language']); ?>">
+	<a class="btn btn-secondary" href="../index.php?language=<?php echo $_GET["language"]; ?>">
       	<?php
       	    echo $cancelButton
       	?>

@@ -1,19 +1,15 @@
-<?php 
-    setcookie('language', ''); 
-
+<?php  
     
     $title = "List of products";
     $editButton = "Edit";
     $deleteButton = "Delete";
     $createButton = "Create";
-    $_SESSI0N['language'] = '';
     
     if(isset($_GET['language'])){
       $languageChoice = htmlspecialchars($_GET['language']);
-      setcookie('language', $languageChoice); 
+      
     } else {
       $languageChoice = 'Danish';
-      setcookie('language', $languageChoice); 
     }
 
 
@@ -52,7 +48,7 @@
 
           while($datas = $getProductListWithLanguageId->fetch()){
               $productName = htmlspecialchars($datas['products_description_name']);
-			        $productPrice = htmlspecialchars($datas['products_price']);
+              $productPrice = htmlspecialchars($datas['products_price']);
               $productReference = htmlspecialchars($datas['products_reference']);
               $idProduct = htmlspecialchars($datas['products_description_id']);
       ?>
@@ -64,7 +60,7 @@
                 ?>
             </p>
         </div>
-		<div class="productPrice col-md-2">
+    <div class="productPrice col-md-2">
             <p>
                 <?php
                    echo $productPrice;
@@ -79,7 +75,7 @@
             </p>
         </div>
         <div class="editButton col-md-2">
-            <a class="btn btn-primary" href="EditCreatePage/editCreatePage.php?id=<?php echo $idProduct; ?>">
+            <a class="btn btn-primary" href="EditCreatePage/editCreatePage.php?id=<?php echo $idProduct; ?>&language=<?php echo $languageChoice; ?>">
               <?php
                   echo $editButton;
               ?>
@@ -88,6 +84,7 @@
         <div class="deleteButton col-md-2">
           <form method="get" action="DeleteProduct/deleteAlert.php">
             <input type="hidden" name="productId" value="<?php echo $idProduct; ?>">
+            <input type="hidden" name="language" value="<?php echo $languageChoice; ?>">
             <input class="btn btn-danger" type="submit" name="deleteButton" value="<?php echo $deleteButton; ?>">
           </form>     
         </div>
@@ -98,7 +95,7 @@
         ?>
     </div>
     <div class="createButton">
-      <a class="btn btn-info" href="EditCreatePage/editCreatePage.php">
+      <a class="btn btn-info" href="EditCreatePage/editCreatePage.php?language=<?php echo $languageChoice; ?>">
         <?php 
           echo $createButton
         ?> 
