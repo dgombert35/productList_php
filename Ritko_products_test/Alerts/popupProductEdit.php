@@ -9,7 +9,7 @@
 	  	<?php echo $productCreate; ?>
 	  </div>
 	  <div class="modal-footer">
-	  	<a class="btn btn-primary" href="../productsTest.php?language=<?php echo htmlspecialchars($_COOKIE['language']); ?>">
+	  	<a class="btn btn-primary" href="../index.php?language=<?php echo htmlspecialchars($_GET['language']); ?>">
 	  		<?php echo $okButton; ?>
 	  	</a>
 	  </div>
